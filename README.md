@@ -7,5 +7,10 @@ git cloneしてinit.sh叩けばおｋ
 
 #### vim
 初回起動時は
-<pre>:NeoBundleInstall</pre>
+<pre>
+$ mkdir -p ~/.vim/bundle
+$ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+$ vim
+:NeoBundleInstall
+</pre>
 を叩く
