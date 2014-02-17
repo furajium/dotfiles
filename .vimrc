@@ -22,10 +22,6 @@ set wrapscan
 " Unicodeで行末が変になる問題対策
 set ambiwidth=double
 
-" PHPの辞書読み込み
-autocmd FileType php :set dictionary=~/.vim/dict/php.dict
-
-
 " =================
 " |neobundle 
 " =================
@@ -40,8 +36,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/vim-scripts/AutoComplPop.git'
 
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " NERDTreeの起動をF7に設定
 nmap <F7> :NERDTreeToggle
