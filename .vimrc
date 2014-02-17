@@ -42,7 +42,7 @@ filetype plugin indent on
 nmap <F7> :NERDTreeToggle
 " ファイルを指定しない場合にNERDTree起動
 let file_name = expand("%")
-if has('vim_starting') &&  file_name == ""
+if has('vim_starting') && file_name == ""
   autocmd VimEnter * NERDTree ./
 endif
 
