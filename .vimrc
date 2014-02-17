@@ -1,5 +1,9 @@
-" 行番号
+" 行番号を表示
 set number
+" ルーラー表示
+set ruler
+" カーソルラインを表示
+set cursorline
 " 文字コードの指定
 set encoding=utf-8
 " タブで空白文字
@@ -12,6 +16,8 @@ set shiftwidth=2
 set smarttab
 " 検索が末尾行ったら先頭から
 set wrapscan
+" Unicodeで行末が変になる問題対策
+set ambiwidth=double
 
 " =================
 " |neobundle 
