@@ -1,3 +1,6 @@
+set nocompatible
+filetype off
+
 " 行番号を表示
 set number
 " ルーラー表示
@@ -26,8 +29,6 @@ autocmd FileType php :set dictionary=~/.vim/dict/php.dict
 " =================
 " |neobundle 
 " =================
-set nocompatible
-filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
