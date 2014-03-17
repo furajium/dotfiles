@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+syntax on
 " 行番号を表示
 set number
 " ルーラー表示
