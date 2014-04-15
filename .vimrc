@@ -36,6 +36,7 @@ call neobundle#rc(expand('~/.vim/bundle'))
 " My Bundles here:
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/vim-scripts/AutoComplPop.git'
+NeoBundle 'scrooloose/syntastic.git'
 
 filetype plugin indent on
 
