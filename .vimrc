@@ -23,8 +23,11 @@ set wrapscan
 " Unicodeで行末が変になる問題対策
 set ambiwidth=double
 
+" 行末の空白を除去
+autocmd BufWritePre * :%s/\s\+$//e
+
 " =================
-" |neobundle 
+" |neobundle
 " =================
 
 if has('vim_starting')
