@@ -51,3 +51,7 @@ if has('vim_starting') && file_name == ""
   autocmd VimEnter * NERDTree ./
 endif
 
+" rubocop
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+
