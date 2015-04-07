@@ -10,8 +10,9 @@ function history-all { history -E 1 }
 alias s="git status"
 alias d="git diff"
 alias b="git branch"
+alias be="bundle exec"
 
-PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/bin:/usr/local/src/go/bin/
 
 export PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -21,6 +22,16 @@ if [ -d $HOME/.phpenv ]; then
   export PATH="$HOME/.phpenv/bin:$PATH"
   eval "$(phpenv init -)"
 fi
+
+[ ! -d $HOME/.pyenv ] && git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+if [ -d $HOME/.pyenv ]; then
+    [ ! -d $HOME/.pyenv/plugins/pyenv-virtualenv ] && git clone git://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH=$PYENV_ROOT/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 # 色設定
 autoload -U colors; colors
