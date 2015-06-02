@@ -10,7 +10,9 @@ function history-all { history -E 1 }
 alias s="git status"
 alias d="git diff"
 alias b="git branch"
+alias l="git log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'"
 alias be="bundle exec"
+alias grep="grep --color"
 
 PATH=$PATH:$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/
 
