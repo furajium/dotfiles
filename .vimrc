@@ -42,6 +42,7 @@ NeoBundle 'https://github.com/vim-scripts/AutoComplPop.git'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'wakatime/vim-wakatime'
 
 filetype plugin indent on
 
@@ -57,3 +58,10 @@ endif
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
+" file exec
+function! ExecuteCurrentFile()
+  if &filetype == 'php' || &filetype == 'ruby'
+    execute '!' . &filetype . ' %'
+  endif
+endfunction
+nnoremap <Space> :call ExecuteCurrentFile()<CR>

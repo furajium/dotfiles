@@ -12,7 +12,7 @@ alias d="git diff"
 alias b="git branch"
 alias be="bundle exec"
 
-PATH=$PATH:$HOME/bin:/usr/local/src/go/bin/
+PATH=$PATH:$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/
 
 export PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
