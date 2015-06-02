@@ -15,8 +15,12 @@ alias be="bundle exec"
 PATH=$PATH:$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/
 
 export PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
+[ ! -d $HOME/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 if [ -d $HOME/.phpenv ]; then
   export PATH="$HOME/.phpenv/bin:$PATH"
