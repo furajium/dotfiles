@@ -41,10 +41,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'https://github.com/vim-scripts/AutoComplPop.git'
 NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'evidens/vim-twig'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wakatime/vim-wakatime'
 call neobundle#end()
+
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby','javascript', 'haml'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_haml_checkers = ['haml_lint']
 
 filetype plugin indent on
 
@@ -55,10 +61,6 @@ let file_name = expand("%")
 if has('vim_starting') && file_name == ""
   autocmd VimEnter * NERDTree ./
 endif
-
-" rubocop
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
-let g:syntastic_ruby_checkers = ['rubocop']
 
 " file exec
 function! ExecuteCurrentFile()
