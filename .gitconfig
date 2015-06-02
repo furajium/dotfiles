@@ -1,0 +1,11 @@
+[core]
+	editor = vim
+[include]
+        path = ~/.gitconfig_local
+[push]
+	default = current
+[alias]
+	ciae = commit --allow-empty
+        co = checkout
+[fetch]
+	prune = true
