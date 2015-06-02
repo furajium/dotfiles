@@ -34,7 +34,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-call neobundle#rc(expand('~/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'https://github.com/scrooloose/nerdtree.git'
@@ -43,6 +44,7 @@ NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wakatime/vim-wakatime'
+call neobundle#end()
 
 filetype plugin indent on
 
