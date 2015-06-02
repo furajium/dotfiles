@@ -1,11 +1,18 @@
 [core]
-	editor = vim
+  editor = vim
 [include]
-        path = ~/.gitconfig_local
+  path = ~/.gitconfig_local
 [push]
-	default = current
+  default = current
 [alias]
-	ciae = commit --allow-empty
-        co = checkout
+  ciae = commit --allow-empty
+  co = checkout
 [fetch]
-	prune = true
+  prune = true
+[color]
+  ui = auto
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
