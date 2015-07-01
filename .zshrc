@@ -71,3 +71,7 @@ export GIT_PS1_SHOWUPSTREAM=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWDIRTYSTATE=1
+
+if [ -e $HOME/.private_config ]; then
+  source $HOME/.private_config
+fi
