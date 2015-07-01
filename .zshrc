@@ -37,6 +37,11 @@ if [ -d $HOME/.pyenv ]; then
     eval "$(pyenv init -)"
 fi
 
+[ ! -e $HOME/.git-prompt.sh ] && curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+if [ -e $HOME/.git-prompt.sh ]; then
+  source $HOME/.git-prompt.sh
+fi
+
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 # 色設定
@@ -53,7 +58,7 @@ setopt prompt_subst
 
 # プロンプト指定
 PROMPT="
-[%n] %{${fg[yellow]}%}%~%{${reset_color}%}
+[%n]%{${fg[blue]}%}% \$(__git_ps1)%{${reset_color}%} %{${fg[yellow]}%}%~%{${reset_color}%}
 %(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(๑¯Δ¯๑)/ <!(*;-;%)? <)%{${reset_color}%} "
 
 # プロンプト指定(コマンドの続き)
@@ -61,3 +66,8 @@ PROMPT2='[%n]> '
 
 # もしかして時のプロンプト指定
 SPROMPT="%{$fg[red]%}%{$suggest%}(*'~'%)? < もしかして %B%r%b %{$fg[red]%}かな? [そう!(y), 違う!(n),a,e]:${reset_color} "
+
+export GIT_PS1_SHOWUPSTREAM=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWDIRTYSTATE=1
