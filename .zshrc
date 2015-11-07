@@ -7,6 +7,7 @@ SAVEHIST=100000
 setopt extended_history
 function history-all { history -E 1 }
 
+alias ll="ls -l"
 alias s="git status"
 alias d="git diff"
 alias b="git branch"
