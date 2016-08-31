@@ -25,6 +25,12 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
+[ ! -d $HOME/.exenv ] && git clone git://github.com/mururu/exenv.git ~/.exenv && git clone git://github.com/mururu/elixir-build.git ~/.exenv/plugins/elixir-build
+if [ -d $HOME/.exenv ]; then
+  export PATH="$HOME/.exenv/bin:$PATH"
+  eval "$(exenv init -)"
+fi
+
 if [ -d $HOME/.phpenv ]; then
   export PATH="$HOME/.phpenv/bin:$PATH"
   eval "$(phpenv init -)"
