@@ -48,9 +48,10 @@ NeoBundle 'wakatime/vim-wakatime'
 call neobundle#end()
 
 let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['ruby','javascript', 'haml'] }
+            \ 'active_filetypes': ['ruby','javascript', 'haml', 'slim'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_haml_checkers = ['haml_lint']
+let g:syntastic_slim_checkers = ['slimrb']
 
 filetype plugin indent on
 
