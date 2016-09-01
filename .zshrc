@@ -15,33 +15,14 @@ alias l="git log --graph --date=short --decorate=short --pretty=format:'%Cgreen%
 alias be="bundle exec"
 alias grep="grep --color"
 
-PATH=$PATH:$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/
+PATH=$PATH:$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/:/usr/local/pgsql/bin
 
 export PATH
 
-[ ! -d $HOME/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-if [ -d $HOME/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
-[ ! -d $HOME/.exenv ] && git clone git://github.com/mururu/exenv.git ~/.exenv && git clone git://github.com/mururu/elixir-build.git ~/.exenv/plugins/elixir-build
-if [ -d $HOME/.exenv ]; then
-  export PATH="$HOME/.exenv/bin:$PATH"
-  eval "$(exenv init -)"
-fi
-
-if [ -d $HOME/.phpenv ]; then
-  export PATH="$HOME/.phpenv/bin:$PATH"
-  eval "$(phpenv init -)"
-fi
-
-[ ! -d $HOME/.pyenv ] && git clone git://github.com/yyuu/pyenv.git ~/.pyenv
-if [ -d $HOME/.pyenv ]; then
-    [ ! -d $HOME/.pyenv/plugins/pyenv-virtualenv ] && git clone git://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH=$PYENV_ROOT/bin:$PATH
-    eval "$(pyenv init -)"
+[ ! -d $HOME/.anyenv ] && git clone https://github.com/riywo/anyenv ~/.anyenv
+if [ -d $HOME/.anyenv ]; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
 fi
 
 [ ! -e $HOME/.git-prompt.sh ] && curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
