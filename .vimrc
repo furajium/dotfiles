@@ -46,6 +46,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wakatime/vim-wakatime'
+NeoBundle 'leafgarland/typescript-vim'
 call neobundle#end()
 
 let g:syntastic_mode_map = { 'mode': 'passive',
