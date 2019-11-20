@@ -47,7 +47,7 @@ setopt prompt_subst
 # プロンプト指定
 PROMPT="
 [%n]%{${fg[blue]}%}% \$(__git_ps1)%{${reset_color}%} %{${fg[yellow]}%}%~%{${reset_color}%}
-%(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(๑¯Δ¯๑)/ <!(*;-;%)? <)%{${reset_color}%} "
+%(?.%{$fg[green]%}.%{$fg[blue]%})%(?!(๑¯Δ¯๑)/ <!(*;Δ;%)? <)%{${reset_color}%} "
 
 # プロンプト指定(コマンドの続き)
 PROMPT2='[%n]> '
