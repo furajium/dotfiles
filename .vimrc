@@ -43,6 +43,7 @@ NeoBundle 'https://github.com/vim-scripts/AutoComplPop.git'
 NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'evidens/vim-twig'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'wakatime/vim-wakatime'
 call neobundle#end()
