@@ -23,6 +23,8 @@ export PATH
 if [ -d $HOME/.anyenv ]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
+
+  [ ! -d $HOME/.anyenv/plugins ] && git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 fi
 
 [ ! -e $HOME/.git-prompt.sh ] && curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
