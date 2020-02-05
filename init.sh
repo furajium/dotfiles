@@ -7,9 +7,8 @@ for dotfile in .?*; do
   fi
 done
 
-# php 辞書ファイル
-php -r '$f=get_defined_functions();echo join("\n",$f["internal"]);'|sort > ~/.vim/dict/php.dict
-
-# NeoBundleInstall
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-vim +NeoBundleInstall +qall
+# install dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+# For example, we just use `~/.cache/dein` as installation directory
+sh ./installer.sh ~/.cache/dein
+rm ./installer.sh
