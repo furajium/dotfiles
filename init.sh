@@ -12,3 +12,7 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 # For example, we just use `~/.cache/dein` as installation directory
 sh ./installer.sh ~/.cache/dein
 rm ./installer.sh
+
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+[ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+ln -is $HOME/.vimrc $HOME/.config/nvim/init.vim
