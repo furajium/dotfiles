@@ -15,7 +15,7 @@ alias l="git log --graph --date=short --decorate=short --pretty=format:'%Cgreen%
 alias be="bundle exec"
 alias grep="grep --color"
 
-PATH=$PATH:$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/:/usr/local/pgsql/bin
+PATH=$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/:/usr/local/pgsql/bin:$PATH
 
 export PATH
 
