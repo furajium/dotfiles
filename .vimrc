@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
 
+inoremap <silent> jj <ESC>
+
 syntax on
 " 行番号を表示
 set number
