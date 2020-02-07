@@ -29,26 +29,21 @@ autocmd BufWritePre * :%s/\s\+$//e
 " =================
 " |dein
 " =================
+
+let s:dein_config_dir = $XDG_CONFIG_HOME . '/nvim'
+let s:dein_cache_dir = $XDG_CACHE_HOME . '/dein'
+
 if &compatible
   set nocompatible
 endif
 " Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$XDG_CACHE_HOME/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+if dein#load_state(s:dein_cache_dir)
+  call dein#begin(s:dein_cache_dir)
 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('scrooloose/syntastic')
-  call dein#add('slim-template/vim-slim')
-  call dein#add('leafgarland/typescript-vim')
-  call dein#add('tpope/vim-fugitive')
+  call dein#load_toml(s:dein_config_dir . '/dein.toml', {'lazy': 0})
+  call dein#load_toml(s:dein_config_dir . '/dein_lazy.toml', {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
@@ -57,21 +52,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['ruby','javascript', 'haml', 'slim'] }
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_slim_checkers = ['slimrb']
-
 filetype plugin indent on
-
-" NERDTreeの起動をF7に設定
-nmap <F7> :NERDTreeToggle
-" ファイルを指定しない場合にNERDTree起動
-let file_name = expand("%")
-if has('vim_starting') && file_name == ""
-  autocmd VimEnter * NERDTree ./
-endif
 
 " file exec
 function! ExecuteCurrentFile()

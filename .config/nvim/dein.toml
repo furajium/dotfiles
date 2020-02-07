@@ -1,0 +1,13 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+nmap <F7> :NERDTreeToggle
+
+let file_name = expand("%")
+if has('vim_starting') && file_name == ""
+  autocmd VimEnter * NERDTree ./
+endif
+'''

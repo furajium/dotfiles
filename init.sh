@@ -16,3 +16,5 @@ rm ./installer.sh
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
 ln -is $HOME/.vimrc $HOME/.config/nvim/init.vim
+ln -is $PWD/.config/nvim/dein.toml $HOME/.config/nvim/dein.toml
+ln -is $PWD/.config/nvim/dein_lazy.toml $HOME/.config/nvim/dein_lazy.toml

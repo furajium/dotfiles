@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+if = "!has('nvim')"
+on_i = 1
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+if = "!has('nvim')"
+on_i = 1
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+on_i = 1
+hook_post_source = '''
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby','javascript', 'haml', 'slim'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_haml_checkers = ['haml_lint']
+let g:syntastic_slim_checkers = ['slimrb']
+'''
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['ts']
