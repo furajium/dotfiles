@@ -13,14 +13,12 @@ if = "!has('nvim')"
 on_i = 1
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'w0rp/ale'
 on_i = 1
 hook_post_source = '''
-let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['ruby','javascript', 'haml', 'slim'] }
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_slim_checkers = ['slimrb']
+let g:ale_fixers = {
+\   'ruby': ['rubocop'],
+\}
 '''
 
 [[plugins]]
