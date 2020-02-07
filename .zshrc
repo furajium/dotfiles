@@ -19,6 +19,9 @@ PATH=$HOME/bin:/usr/local/heroku/bin:/usr/local/src/go/bin/:/usr/local/pgsql/bin
 
 export PATH
 
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+
 [ ! -d $HOME/.anyenv ] && git clone https://github.com/riywo/anyenv ~/.anyenv
 if [ -d $HOME/.anyenv ]; then
   export PATH="$HOME/.anyenv/bin:$PATH"
