@@ -48,6 +48,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/syntastic')
   call dein#add('slim-template/vim-slim')
   call dein#add('leafgarland/typescript-vim')
+  call dein#add('tpope/vim-fugitive')
 
   call dein#end()
   call dein#save_state()
