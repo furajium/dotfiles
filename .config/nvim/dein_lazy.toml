@@ -30,6 +30,10 @@ repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 [[plugins]]
+repo = 'tpope/vim-endwise'
+on_ft = ['rb']
+
+[[plugins]]
 repo = 'neoclide/coc.nvim'
 merged = '0'
 rev = 'release'
