@@ -34,6 +34,10 @@ repo = 'tpope/vim-endwise'
 on_ft = ['rb']
 
 [[plugins]]
+repo = 'cohama/lexima.vim'
+on_i = 1
+
+[[plugins]]
 repo = 'neoclide/coc.nvim'
 merged = '0'
 rev = 'release'
