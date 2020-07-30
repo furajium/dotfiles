@@ -8,7 +8,7 @@ setopt extended_history
 function history-all { history -E 1 }
 
 alias vi="nvim"
-alias ll="ls -l"
+alias ll="ls -l --color=auto"
 alias s="git status"
 alias d="git diff"
 alias b="git branch"
