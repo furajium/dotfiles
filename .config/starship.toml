@@ -1,0 +1,24 @@
+add_newline = true
+
+[character]
+style_success = "#ff69b4"
+symbol = "🐏💬"
+error_symbol = "🥩💢"
+use_symbol_for_status = true
+
+[directory]
+style = "#ba55d3"
+truncation_length = 0
+truncate_to_repo = false
+
+[git_branch]
+symbol = "🌱 "
+
+[git_commit]
+prefix = "aaaa"
+
+[docker_context]
+symbol = "🐋 "
+
+[package]
+disabled = true

@@ -23,6 +23,8 @@ export PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
+eval "$(starship init zsh)"
+
 [ ! -d $HOME/.anyenv ] && git clone https://github.com/riywo/anyenv ~/.anyenv
 if [ -d $HOME/.anyenv ]; then
   export PATH="$HOME/.anyenv/bin:$PATH"

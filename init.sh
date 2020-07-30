@@ -18,6 +18,7 @@ rm ./installer.sh
 ln -is $HOME/.vimrc $HOME/.config/nvim/init.vim
 ln -is $PWD/.config/nvim/dein.toml $HOME/.config/nvim/dein.toml
 ln -is $PWD/.config/nvim/dein_lazy.toml $HOME/.config/nvim/dein_lazy.toml
+ln -is $PWD/.config/starship.toml $HOME/.config/starship.toml
 
 [ ! -d $HOME/.config/git ] && mkdir $HOME/.config/git
 ln -is $PWD/.config/git/ignore $HOME/.config/git/ignore
