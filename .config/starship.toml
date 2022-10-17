@@ -1,10 +1,8 @@
 add_newline = true
 
 [character]
-style_success = "#ff69b4"
-symbol = "🐏💬"
+success_symbol = "🐏💬"
 error_symbol = "🥩💢"
-use_symbol_for_status = true
 
 [directory]
 style = "#ba55d3"
@@ -13,9 +11,6 @@ truncate_to_repo = false
 
 [git_branch]
 symbol = "🌱 "
-
-[git_commit]
-prefix = "aaaa"
 
 [docker_context]
 symbol = "🐋 "
